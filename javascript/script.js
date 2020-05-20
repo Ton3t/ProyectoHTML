@@ -50,13 +50,11 @@ function masTexto() {
 
     boton.onclick = document.getElementById("anyadeTexto").appendChild(texto);
     boton.style.display = "none";
-    
-    
 
 }
 
 
-document.addEventListener("load", iniciaJava, false);
+//document.addEventListener("load", iniciaJava, false);
 
 
 /**
