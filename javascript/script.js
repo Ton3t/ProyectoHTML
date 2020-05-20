@@ -63,7 +63,7 @@ document.addEventListener("load", iniciaJava, false);
  * Función que se ejecuta una vez cargada la página
  */
 
-/*
+
 
 window.onload = function () {
 
@@ -74,7 +74,7 @@ window.onload = function () {
     setInterval(rotarImagenes, 5000);
 
     this.alertaJava();
+    this.masTexto();
 
 }
 
-*/
