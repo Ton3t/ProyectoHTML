@@ -1,5 +1,7 @@
 function iniciar() {
 
+    document.getElementById('botonEnviar').addEventListener("click", nombre);
+
 }
 
 var imagenes = new Array(
@@ -23,6 +25,22 @@ function rotarImagenes() {
     contador++;
     document.getElementById("imagenes").src = imagenes[contador % imagenes.length][0];
     document.getElementById("banner").href = imagenes[contador % imagenes.length][1];
+}
+
+var x = 0;
+
+/* Comprobar nombre */
+function nombre() {
+    
+    var texto = document.getElementById('txtArea').value;
+
+    
+    if (texto == "") {
+        alert("El nombre no puede estar vacio");
+        
+    } else {
+        x++;
+    }
 }
 
 window.onload = function() {

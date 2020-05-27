@@ -1,5 +1,4 @@
 #miFor {
-    
     color: #333;
     text-align: center;
     padding-top: 10px;
@@ -9,7 +8,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 .formu {
