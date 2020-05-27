@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilo.css">
-    <script src="./javascript/script.js"></script>
+    <script src=""></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <div class="contenedor">
+            <h1>Apartamentos Isa i Toni</h1>
+            <input type="checkbox" name="Menu" id="menu-bar">
+            <label for="menu-bar"><img src="./img/menu.png" alt="" id="ico"></label>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="info.html">Información</a>
+                <a href="formu.html">Formulario</a>
+            </nav>
+        </div>
+    </header>
+    <section id="banner">
+        <img src="./img/foto7.jpg" alt="imgBanner" id="imagenes">
+        <div class="contenedor">
+            <h2>Apartamenos Isa i Toni</h2>
+            <p>
+                Un lugar maravilloso, en el valle de Sella Alicante, situado a los pies de la Sierra de Aitana
+            </p>
+        </div>
+    </section>
+    <section id="miFor">
+        <h2>Deja tu comentario</h2>
+        <div class="contenedor">
+            <div class="formu">
+                <form id="miformulario" action="" method="">
+                    <textarea name="opina" id="txtArea" cols="30" rows="10"></textarea><br>
+                    Nombre* <input size="38" type="text" name="nombre"></input> <br/>
+                    Apellidos <input size="38" type="text" name="apellidos"></input> <br/>
+                    Em@il <input size="38" type="text" name="email" id=""></input><br>
+                    Edad* <input size="38" type="text" name="edad"></input> <br/>
+                    Provincia: <br/>
+                    <input type="radio" name="provincia" value="alicante"/> Alicante <br/>
+                    <input type="radio" name="provincia" value="valencia"/> Valencia <br/>
+                    <input type="radio" name="provincia" value="castellon"/> Castellón <br/>
+                    <input type="radio" name="provincia" value="otra"/> Otra <br/>
+                    Idioma en el que prefieres recibir información
+                    <select name="idioma" id="opciones">
+                        <option value="">-Selecciona un idioma de la lista-</option>
+                        <option value="castellano">Castellano</option>
+                        <option value="valenciano">Valenciano</option>
+                        <option value="ingles">Inglés</option>
+                    </select> <br/>
+                    
+                    <input type="checkbox" name="aceptar" id="terminos"></input> Acepto las condiciones de uso<br/>
+                    <input type="button" id="botonEnviar" value="Enviar"></input>
+                </form>
+            </div>
+            
+        </div>
+        
+    </section>
+    <footer>
+        <div class="contenedor">
+            <p>Antonio Moreno Cantó &copy; 2020</p>
+        </div>
+    </footer>
 </body>
 </html>

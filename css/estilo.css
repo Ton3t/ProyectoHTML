@@ -7,6 +7,7 @@
 @import url(banner.css);
 @import url(blog.css);
 @import url(info.css);
+@import url(formu.css);
 
 /* Quitamos padding i margin */
 * {
@@ -60,6 +61,7 @@ section {
 #recibir {
     text-align: center;
 }
+
 
 #btnLeer {
     cursor: pointer;
