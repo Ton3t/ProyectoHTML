@@ -9,6 +9,11 @@ header label {
     cursor: pointer;
 }
 
+#ico {
+    width: 35px;
+    height: 35px;
+}
+
 .menu {
     position: absolute;
     top: 50px;

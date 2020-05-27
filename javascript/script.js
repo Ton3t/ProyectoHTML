@@ -68,12 +68,9 @@ window.onload = function () {
 
     // Cargamos una imagen aleatoria
     rotarImagenes();
-
     // Indicamos que cada 5 segundos cambie la imagen
     setInterval(rotarImagenes, 5000);
-
     this.alertaJava();
-    
 
 }
 
