@@ -3,11 +3,11 @@ function iniciaJava() {
     /* Alerta a los usuarios */
     alert("Esta web utiliza javascript");
     alert("Web diseñada por Antonio Moreno Cantó");
-
     
     document.getElementById('btnLeer').addEventListener("click", masTexto);
     
 }
+
 
 
 /**

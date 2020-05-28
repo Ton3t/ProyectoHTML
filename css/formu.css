@@ -38,3 +38,17 @@
     background-color: rgba(51, 51, 51, 0.5);
     color: #333;
 }
+
+#firmas {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#firmas .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
