@@ -83,9 +83,14 @@ function validarFormu() {
 
               zona = document.getElementById('firmas');
 
-              zona.insertAdjacentHTML('afterbegin', document.getElementById('txtArea').value);
+              zona.appendChild(section);
+              /*
 
-             //document.body.appendChild(section);
+              zona.insertAdjacentHTML('afterbegin', document.getElementById('txtArea').value, '<br>');
+              zona.insertAdjacentHTML('afterbegin', document.getElementById('f1').value), '<br>';
+              zona.insertAdjacentHTML('afterbegin', document.getElementById('email').value), '<br>';
+
+             */
 
 
 
