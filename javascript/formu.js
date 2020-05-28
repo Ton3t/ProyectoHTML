@@ -70,20 +70,23 @@ function validarFormu() {
               /* Vamos a crear una seccion con el comentario del cliente */
 
               
-
               // Crear nodo de tipo Element
-              var section = document.createElement("section");
-              
+              var salto = '<br>';
+
 
               // Crear nodo de tipo Text
-              var op = document.getElementById("txtArea").value;
+              var op = document.getElementById("txtArea").value + (document.getElementById("txtArea").innerHTML = "<br/>") + document.getElementById('f1').value + "<br/>" + document.getElementById('email').value + "<br/>";
+              
               var contenido = document.createTextNode(op);
 
-              section.appendChild(contenido);
+              //section.appendChild(contenido);
 
               zona = document.getElementById('firmas');
 
-              zona.appendChild(section);
+              zona.appendChild(contenido);
+              
+              
+
               /*
 
               zona.insertAdjacentHTML('afterbegin', document.getElementById('txtArea').value, '<br>');
