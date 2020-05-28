@@ -27,7 +27,6 @@ function rotarImagenes() {
   document.getElementById("banner").href = imagenes[contador % imagenes.length][1];
 }
 
-var x = 0;
 
 /* Comprobar nombre */
 function validarFormu() {
@@ -53,7 +52,7 @@ function validarFormu() {
       document.getElementById("f1").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
       document.getElementById("f1").focus();
     } else {
-      document.getElementById("f1").style.backgroundColor = "rrgb(0, 255, 0, 0.3)";
+      document.getElementById("f1").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
       if (formu[2].value == "" || formu[2].value == null) {
         document.getElementById("f2").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
         document.getElementById("f2").focus();
@@ -70,19 +69,13 @@ function validarFormu() {
           } else {
             document.getElementById("edad").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
             if (formu[5].checked == false || formu[5].checked == null) {
-              document.getElementById("terminos").style.color = "rgb(255, 0, 0, 0.3)";
+              alert("Debes aceptar los términos.");
               document.getElementById("terminos").focus();
             } else {
               document.getElementById("terminos").style.color = "rgb(0, 255, 0, 0.3)";
               alert("Formulario rellenado");
 
               /* Vamos a crear una seccion con el comentario del cliente */
-
-
-              // Crear nodo de tipo Element
-              var salto = '<br>';
-
-
               // Crear nodo de tipo Text
               var op = document.getElementById("txtArea").value + (document.getElementById("txtArea").innerHTML = "<br/>") + document.getElementById('f1').value + "<br/>" + document.getElementById('email').value + "<br/>";
 
@@ -93,19 +86,6 @@ function validarFormu() {
               zona = document.getElementById('firmas');
 
               zona.appendChild(contenido);
-
-
-
-              /*
-
-              zona.insertAdjacentHTML('afterbegin', document.getElementById('txtArea').value, '<br>');
-              zona.insertAdjacentHTML('afterbegin', document.getElementById('f1').value), '<br>';
-              zona.insertAdjacentHTML('afterbegin', document.getElementById('email').value), '<br>';
-
-             */
-
-
-
               /* Limpiamos el formulario */
 
               txtArea.value = "";
@@ -122,8 +102,6 @@ function validarFormu() {
               edad2.style.backgroundColor = "white";
               document.getElementById("terminos").checked = 0;
               document.getElementById("txtArea").style.backgroundColor = "white";
-
-
 
             }
           }
