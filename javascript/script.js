@@ -8,8 +8,6 @@ function iniciaJava() {
     
 }
 
-
-
 /**
  * Array con las imagenes y enlaces que se iran mostrando en la web
  */

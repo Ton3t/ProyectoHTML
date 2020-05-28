@@ -58,7 +58,7 @@ function validarFormu() {
         document.getElementById("f2").focus();
       } else {
         document.getElementById("f2").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
-        if (!(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor))) {
+        if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/.test(valor)){
           document.getElementById("email").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
           document.getElementById("email").focus();
         } else {
@@ -77,12 +77,13 @@ function validarFormu() {
 
               /* Vamos a crear una seccion con el comentario del cliente */
               // Crear nodo de tipo Text
-              var op = document.getElementById("txtArea").value + (document.getElementById("txtArea").innerHTML = "<br/>") + document.getElementById('f1').value + "<br/>" + document.getElementById('email').value + "<br/>";
-
+              //var op = document.getElementById("txtArea").value + '\n' + document.getElementById('f1').value + '\n' + document.getElementById('email').value + '\n';
+              //var op = formu.nombre+'\r'+formu.apellidos+'\r'+formu.opina;
+              var op = document.getElementById("txtArea").value + '\n' + document.getElementById("f1").value + '\n' + document.getElementById("email").value + '\n'
               var contenido = document.createTextNode(op);
-
+              alert(document.getElementById("txtArea").value + '\n' + document.getElementById("f1").value + '\n' + document.getElementById("email").value + '\n');
               //section.appendChild(contenido);
-
+              
               zona = document.getElementById('firmas');
 
               zona.appendChild(contenido);
