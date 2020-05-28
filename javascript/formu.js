@@ -34,7 +34,13 @@ function validarFormu() {
 
   var formu = document.getElementById('miformulario');
   //var forChecked = document.getElementsByName('aceptar');
-  
+  indice = document.getElementById("opciones").selectedIndex;
+    if (indice == null || indice == 0) {
+        alert("Debes puntuar la pagina");
+        return false;
+    } else {
+        
+    }
 
   var edad = document.getElementById('edad').value;
   var txtArea = document.getElementById('txtArea');
@@ -74,12 +80,16 @@ function validarFormu() {
             } else {
               document.getElementById("terminos").style.color = "rgb(0, 255, 0, 0.3)";
               alert("Formulario rellenado");
-
-              /* Vamos a crear una seccion con el comentario del cliente */
+              if (indice == null || indice == 0) {
+                alert("Debes puntuar la pagina");
+                return false;
+            }
+            else {
+/* Vamos a crear una seccion con el comentario del cliente */
               // Crear nodo de tipo Text
               //var op = document.getElementById("txtArea").value + '\n' + document.getElementById('f1').value + '\n' + document.getElementById('email').value + '\n';
               //var op = formu.nombre+'\r'+formu.apellidos+'\r'+formu.opina;
-              var op = document.getElementById("txtArea").value + '\n' + document.getElementById("f1").value + '\n' + document.getElementById("email").value + '\n'
+              var op = document.getElementById("txtArea").value + '\nNombre: ' + document.getElementById("f1").value + '\nEmail: ' + document.getElementById("email").value + '\n'
               var contenido = document.createTextNode(op);
               alert(document.getElementById("txtArea").value + '\n' + document.getElementById("f1").value + '\n' + document.getElementById("email").value + '\n');
               //section.appendChild(contenido);
@@ -103,6 +113,9 @@ function validarFormu() {
               edad2.style.backgroundColor = "white";
               document.getElementById("terminos").checked = 0;
               document.getElementById("txtArea").style.backgroundColor = "white";
+            }
+
+              
 
             }
           }
