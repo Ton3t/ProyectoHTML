@@ -35,7 +35,7 @@ function validarFormu() {
 
   var formu = document.getElementById('miformulario');
   //var forChecked = document.getElementsByName('aceptar');
-
+  
 
   var edad = document.getElementById('edad').value;
   var txtArea = document.getElementById('txtArea');
@@ -43,37 +43,37 @@ function validarFormu() {
   valor = document.getElementById("email").value;
   
 
-  if (formu[0].value == "" || formu[0].value == null || formu[0].length < 100) {
+  if (formu[0].value == "" || formu[0].value == null || txtArea.value.length <= 100) {
     alert("El comentario deber tener 100 caracteres.");
     document.getElementById("txtArea").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
     document.getElementById("txtArea").focus();
   } else {
-    document.getElementById("txtArea").style.backgroundColor = "lightblue";
+    document.getElementById("txtArea").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
     if (formu[1].value == "" || formu[1].value == null) {
       document.getElementById("f1").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
       document.getElementById("f1").focus();
     } else {
-      document.getElementById("f1").style.backgroundColor = "lightblue";
+      document.getElementById("f1").style.backgroundColor = "rrgb(0, 255, 0, 0.3)";
       if (formu[2].value == "" || formu[2].value == null) {
         document.getElementById("f2").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
         document.getElementById("f2").focus();
       } else {
-        document.getElementById("f2").style.backgroundColor = "lightblue";
+        document.getElementById("f2").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
         if (!(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor))) {
           document.getElementById("email").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
           document.getElementById("email").focus();
         } else {
-          document.getElementById("email").style.backgroundColor = "lightblue";
+          document.getElementById("email").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
           if (formu[4].value == "" || formu[4].value == null || isNaN(edad)) {
             document.getElementById("edad").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
             document.getElementById("edad").focus();
           } else {
-            document.getElementById("edad").style.backgroundColor = "lightblue";
+            document.getElementById("edad").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
             if (formu[5].checked == false || formu[5].checked == null) {
               document.getElementById("terminos").style.color = "rgb(255, 0, 0, 0.3)";
               document.getElementById("terminos").focus();
             } else {
-              document.getElementById("terminos").style.color = "lightblue";
+              document.getElementById("terminos").style.color = "rgb(0, 255, 0, 0.3)";
               alert("Formulario rellenado");
 
               /* Vamos a crear una seccion con el comentario del cliente */
