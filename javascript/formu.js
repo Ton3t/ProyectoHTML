@@ -1,6 +1,7 @@
 function iniciar() {
 
   document.getElementById('botonEnviar').addEventListener("click", validarFormu);
+  document.getElementById('txtArea').focus();
 
 }
 
