@@ -1,12 +1,14 @@
 function iniciaJava() {
 
-    /* Alerta a los usuarios */
-    alert("Esta web utiliza javascript");
-    alert("Web diseñada por Antonio Moreno Cantó");
-    
+   
+    document.body.addEventListener("keypress", musica);
     document.getElementById('btnLeer').addEventListener("click", masTexto);
 }
 
+function alertarJava() {
+     /* Alerta a los usuarios */
+     alert("Pulsa M - para escuchar música");
+}
 /**
  * Array con las imagenes y enlaces que se iran mostrando en la web
  */
@@ -42,26 +44,35 @@ function rotarImagenes() {
 function masTexto() {
     var texto = document.createTextNode(" A pocos pasos del establecimiento hay varios supermercados, restaurantes y tiendas. El personal de recepción proporciona información turística. Los Apartamentos Turisticos Isa i Toni están en Sella, cerca de la Ermita de Santa Bárbara. Se encuentran a 30 minutos en coche de las playas más cercanas, ubicadas en Villa Joyosa, y a 60 km del aeropuerto de Alicante. Se ofrece conexión Wi-Fi gratuita. A las parejas les encanta la ubicación — Le han puesto un 9,0 para viajes de dos personas. ¡Hablamos tu idioma!");
     var boton = document.getElementById("btnLeer");
-
-
     document.getElementById("anyadeTexto").appendChild(texto);
     boton.style.display = "none";
 
 }
+
+function musica(elEvento) {
+    var evento = elEvento || window.event;
+    var caracter = evento.charCode || evento.keyCode || evento.altKey || evento.ctrlKey;
+    var audio = document.getElementById("audio");
+    if(String.fromCharCode(caracter) == "m") {
+        alert("Pulsa N - Para quitar la música.");
+        audio.play();
+    }
+    else if(String.fromCharCode(caracter) == "n") {
+        alert("Pulsa M - Para reanudar la múscia.");
+        audio.pause();
+    }
+} 
 
 /**
  * Función que se ejecuta una vez cargada la página
  */
 
 window.onload = function () {
-
     // Cargamos una imagen aleatoria
     rotarImagenes();
     // Indicamos que cada 5 segundos cambie la imagen
     setInterval(rotarImagenes, 5000);
-
-
     this.iniciaJava();
-
+    this.alertarJava();
 }
 

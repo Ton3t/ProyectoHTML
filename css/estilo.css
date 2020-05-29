@@ -84,6 +84,10 @@ section {
     text-align: center;
 }
 
+#audio {
+    display: "none";
+}
+
 footer .contenedor {
     display: flex;
     flex-wrap: wrap;

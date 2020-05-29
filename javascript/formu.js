@@ -36,18 +36,18 @@ function validarFormu() {
   var formu = document.getElementById('miformulario');
   //var forChecked = document.getElementsByName('aceptar');
   indice = document.getElementById("opciones").selectedIndex;
-    if (indice == null || indice == 0) {
-        alert("Debes puntuar la pagina");
-        return false;
-    } else {
-        
-    }
+  if (indice == null || indice == 0) {
+    alert("Debes puntuar la pagina");
+    return false;
+  } else {
+
+  }
 
   var edad = document.getElementById('edad').value;
   var txtArea = document.getElementById('txtArea');
   var f1 = document.getElementById('f1');
   valor = document.getElementById("email").value;
-  
+
 
   if (formu[0].value == "" || formu[0].value == null || txtArea.value.length <= 100) {
     alert("El comentario deber tener 100 caracteres.");
@@ -65,7 +65,7 @@ function validarFormu() {
         document.getElementById("f2").focus();
       } else {
         document.getElementById("f2").style.backgroundColor = "rgb(0, 255, 0, 0.3)";
-        if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/.test(valor)){
+        if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/.test(valor)) {
           document.getElementById("email").style.backgroundColor = "rgb(255, 0, 0, 0.3)";
           document.getElementById("email").focus();
         } else {
@@ -84,40 +84,37 @@ function validarFormu() {
               if (indice == null || indice == 0) {
                 alert("Debes puntuar la pagina");
                 return false;
-            }
-            else {
-/* Vamos a crear una seccion con el comentario del cliente */
-              // Crear nodo de tipo Text
-              //var op = document.getElementById("txtArea").value + '\n' + document.getElementById('f1').value + '\n' + document.getElementById('email').value + '\n';
-              //var op = formu.nombre+'\r'+formu.apellidos+'\r'+formu.opina;
-              var op = document.getElementById("txtArea").value + '\nNombre: ' + document.getElementById("f1").value + '\nEmail: ' + document.getElementById("email").value + '\n'
-              var contenido = document.createTextNode(op);
-              alert(document.getElementById("txtArea").value + '\n' + document.getElementById("f1").value + '\n' + document.getElementById("email").value + '\n');
-              //section.appendChild(contenido);
-              
-              zona = document.getElementById('firmas');
+              } else {
+                /* Vamos a crear una seccion con el comentario del cliente */
+                // Crear nodo de tipo Text
+                //var op = document.getElementById("txtArea").value + '\n' + document.getElementById('f1').value + '\n' + document.getElementById('email').value + '\n';
+                //var op = formu.nombre+'\r'+formu.apellidos+'\r'+formu.opina;
+                var op = document.getElementById("txtArea").value + '\nNombre: ' + document.getElementById("f1").value + '\nEmail: ' + document.getElementById("email").value + '\n'
+                var contenido = document.createTextNode(op);
+                alert(document.getElementById("txtArea").value + '\n' + document.getElementById("f1").value + '\n' + document.getElementById("email").value + '\n');
+                //section.appendChild(contenido);
 
-              zona.appendChild(contenido);
-              /* Limpiamos el formulario */
+                zona = document.getElementById('firmas');
 
-              txtArea.value = "";
-              f1.value = "";
-              f1.style.backgroundColor = "white";
-              var f2 = document.getElementById('f2');
-              f2.value = "";
-              f2.style.backgroundColor = "white";
-              var email2 = document.getElementById('email');
-              email2.value = "";
-              email2.style.backgroundColor = "white";
-              var edad2 = document.getElementById('edad');
-              edad2.value = "";
-              edad2.style.backgroundColor = "white";
-              document.getElementById("terminos").checked = 0;
-              document.getElementById("txtArea").style.backgroundColor = "white";
-            }
+                zona.appendChild(contenido);
+                /* Limpiamos el formulario */
 
-              
-
+                txtArea.value = "";
+                f1.value = "";
+                f1.style.backgroundColor = "white";
+                var f2 = document.getElementById('f2');
+                f2.value = "";
+                f2.style.backgroundColor = "white";
+                var email2 = document.getElementById('email');
+                email2.value = "";
+                email2.style.backgroundColor = "white";
+                var edad2 = document.getElementById('edad');
+                edad2.value = "";
+                edad2.style.backgroundColor = "white";
+                document.getElementById("terminos").checked = 0;
+                document.getElementById("txtArea").style.backgroundColor = "white";
+                
+              }
             }
           }
         }

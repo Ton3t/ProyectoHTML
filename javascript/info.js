@@ -34,13 +34,11 @@ function rotarImagenes() {
     document.getElementById("banner").href = imagenes[contador % imagenes.length][1];
 }
 
-var cambia = true;
-
 function crearTabla() {
 
     var tabla = document.createElement('table');
     tabla.setAttribute('id', 'otraTabla');
-    tabla.setAttribute('summary', 'Descripción de la tabla y su contenido');
+    tabla.setAttribute('summary', 'Precios del hotel');
 
     // Crear <caption> y añadirlo a la <table>
     var caption = document.createElement('caption');
@@ -161,14 +159,16 @@ function cambiaFondo(elEvento) {
     var caracter = evento.charCode || evento.keyCode || evento.altKey || evento.ctrlKey;
     var zona = document.getElementById("principal");
     var letra = String.fromCharCode(caracter);
+    
 
     //--------- Presionando i -------------//
     if (String.fromCharCode(caracter) == "i") {
-        document.body.style.backgroundColor = "lightblue";
+        document.body.style.backgroundColor = "wheat";
     }
     else if (letra == "b") {
         document.body.style.backgroundColor = "#333";
     }
+    
 
 }
 
