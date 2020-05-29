@@ -1,8 +1,8 @@
-
 function iniciaJava() {
 
     document.getElementById('btnPrecio').addEventListener("click", crearTabla);
-    
+    document.body.addEventListener("keypress", cambiaFondo);
+
 }
 
 /**
@@ -41,7 +41,7 @@ function crearTabla() {
     var tabla = document.createElement('table');
     tabla.setAttribute('id', 'otraTabla');
     tabla.setAttribute('summary', 'Descripción de la tabla y su contenido');
-    
+
     // Crear <caption> y añadirlo a la <table>
     var caption = document.createElement('caption');
     var titulo = document.createTextNode('Tabla de precios');
@@ -58,22 +58,22 @@ function crearTabla() {
     thead.rows[0].appendChild(cabecera);
     cabecera = document.createElement('th');
     cabecera.setAttribute('scope', 'col');
-    cabecera.innerHTML = '1 - Noche';
+    cabecera.innerHTML = '- 1 Noche -';
     tabla.rows[0].appendChild(cabecera);
     cabecera = document.createElement('th');
     cabecera.setAttribute('scope', 'col');
-    cabecera.innerHTML = '2 - Noches';
+    cabecera.innerHTML = '- 2 Noches -';
     tabla.rows[0].appendChild(cabecera);
     cabecera = document.createElement('th');
     cabecera.setAttribute('scope', 'col');
-    cabecera.innerHTML = '3 - Noches';
+    cabecera.innerHTML = '- 3 Noches -';
     tabla.rows[0].appendChild(cabecera);
     cabecera = document.createElement('th');
     cabecera.setAttribute('scope', 'col');
-    cabecera.innerHTML = '4 - Noches';
+    cabecera.innerHTML = '- 4 Noches -';
     tabla.rows[0].appendChild(cabecera);
-    
-    
+
+
     // La sección <tfoot> se crearía de forma similar a <thead>
     // Crear sección <tbody>
     var tbody = document.createElement('tbody');
@@ -95,7 +95,7 @@ function crearTabla() {
     tbody.rows[0].cells[3].innerHTML = '648€';
     tbody.rows[0].insertCell(4);
     tbody.rows[0].cells[4].innerHTML = '864€';
-    
+
     tbody.insertRow(0);
     cabecera = document.createElement("th");
     cabecera.setAttribute('scope', 'row');
@@ -112,7 +112,7 @@ function crearTabla() {
     tbody.rows[0].cells[3].innerHTML = '486€';
     tbody.rows[0].insertCell(4);
     tbody.rows[0].cells[4].innerHTML = '648€';
-    
+
     tbody.insertRow(0);
     cabecera = document.createElement("th");
     cabecera.setAttribute('scope', 'row');
@@ -129,7 +129,7 @@ function crearTabla() {
     tbody.rows[0].cells[3].innerHTML = '360€';
     tbody.rows[0].insertCell(4);
     tbody.rows[0].cells[4].innerHTML = '480€';
-    
+
     tbody.insertRow(0);
     cabecera = document.createElement("th");
     cabecera.setAttribute('scope', 'row');
@@ -146,16 +146,31 @@ function crearTabla() {
     tbody.rows[0].cells[3].innerHTML = '180€';
     tbody.rows[0].insertCell(4);
     tbody.rows[0].cells[4].innerHTML = '240€';
-    
+
     // Añadir la tabla creada al final de la página
 
     var zona = document.getElementById("funciones");
     zona.appendChild(tabla);
     document.getElementById('btnPrecio').style.display = "none";
-    
-    
 }
 
+// Cambiar el fondo con una tecla //
+
+function cambiaFondo(elEvento) {
+    var evento = elEvento || window.event;
+    var caracter = evento.charCode || evento.keyCode || evento.altKey || evento.ctrlKey;
+    var zona = document.getElementById("principal");
+    var letra = String.fromCharCode(caracter);
+
+    //--------- Presionando i -------------//
+    if (String.fromCharCode(caracter) == "i") {
+        document.body.style.backgroundColor = "lightblue";
+    }
+    else if (letra == "b") {
+        document.body.style.backgroundColor = "#333";
+    }
+
+}
 
 window.onload = function () {
 
@@ -168,4 +183,3 @@ window.onload = function () {
     this.iniciaJava();
 
 }
-

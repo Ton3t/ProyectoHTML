@@ -5,7 +5,6 @@ function iniciaJava() {
     alert("Web diseñada por Antonio Moreno Cantó");
     
     document.getElementById('btnLeer').addEventListener("click", masTexto);
-    
 }
 
 /**
@@ -50,13 +49,9 @@ function masTexto() {
 
 }
 
-
-
 /**
  * Función que se ejecuta una vez cargada la página
  */
-
-
 
 window.onload = function () {
 
