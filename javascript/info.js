@@ -1,5 +1,7 @@
 
 function iniciaJava() {
+
+    document.getElementById("btnPrecios").addEventListener("load", cambiarFondo);
     
 }
 
@@ -32,6 +34,47 @@ function rotarImagenes() {
     document.getElementById("banner").href = imagenes[contador % imagenes.length][1];
 }
 
+function cambiarFondo(evento) {
+
+    var evento = elEvento || window.event;
+    var caracter = evento.charCode || evento.keyCode || evento.altKey || evento.ctrlKey;
+    
+    //--------- Presionando i -------------//
+    if (String.fromCharCode(caracter) == "i") {
+        document.body.style.background = "none";
+        document.body.style.background = "#fff";
+    }
+    /*
+    //--------- Presionando b ------------//
+    else if (String.fromCharCode(caracter) == "b") {
+        document.getElementById("principal").style.fontWeight = "bold";
+    }
+
+    //---------- Presionando ENTER ----------//
+    else if (evento.keyCode == 13) {
+        var imagen = document.createElement("img");
+        imagen.setAttribute("src", "img/enter.jpg");
+        zona.appendChild(imagen);
+    }
+
+    //-------- Presionando CTRL + ENTER --------------//
+    else if (evento.ctrlKey) {
+        if (caracter.keyCode = 13) {
+            location.href = "https://www.google.es";
+        }
+        
+    }
+
+    //---------- Presionando ALT + M -----------//
+    else if (evento.ctrlKey) {
+        if(caracter.keyCode = 103) {
+            window.open("http://www.google.com/", "_blank", "fullscreen=yes,menubar=yes,location=yes,status=yes,resizable=yes,toolbar=yes");
+        }
+    }
+    */
+}
+
+
 window.onload = function () {
 
     // Cargamos una imagen aleatoria
@@ -43,3 +86,5 @@ window.onload = function () {
     this.iniciaJava();
 
 }
+
+window.addEventListener("load",iniciaJava,false);
