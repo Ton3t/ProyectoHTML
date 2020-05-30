@@ -180,9 +180,9 @@ function cambiaFondo(elEvento) {
 
 }
 
-function iniciarVideo() {
-    var video = document.getElementById("video1");
-    video.play();
+function muestraInfo() {
+    var info = document.getElementsByClassName("muestra");
+    info.focu(window.load = "https://google.es");
 }
 
 window.onload = function () {
