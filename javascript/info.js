@@ -2,6 +2,7 @@ function iniciaJava() {
 
     document.getElementById('btnPrecio').addEventListener("click", crearTabla);
     document.body.addEventListener("keypress", cambiaFondo);
+    document.getElementById('video1').addEventListener("focus", iniciarVideo);
 
 }
 
@@ -170,6 +171,11 @@ function cambiaFondo(elEvento) {
     }
     
 
+}
+
+function iniciarVideo() {
+    var video = document.getElementById("video1");
+    video.play();
 }
 
 window.onload = function () {

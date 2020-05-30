@@ -26,20 +26,25 @@
 
 #eventos {
     background: wheat;
-    color: white;
+    color: #333;
     text-align: center;
     padding-top: 10px;
+}
+
+#eventos iframe {
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
 }
 
 #enventos .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 #funciones {
-    background: #333;
+    background: wheat;
     color: white;
     text-align: center;
     padding-top: 10px;
@@ -70,8 +75,8 @@
 }
 
 #otraTabla {
-    background: #333;
-    color: white;
+    background: wheat;
+    color: #333;
     text-align: center;
     padding-top: 10px;
     margin: auto;

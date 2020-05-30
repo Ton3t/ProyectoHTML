@@ -61,7 +61,7 @@ function musica(elEvento) {
         alert("Pulsa M - Para reanudar la múscia.");
         audio.pause();
     }
-} 
+}
 
 /**
  * Función que se ejecuta una vez cargada la página
