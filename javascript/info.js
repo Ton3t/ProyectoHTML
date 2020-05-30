@@ -164,10 +164,17 @@ function cambiaFondo(elEvento) {
 
     //--------- Presionando i -------------//
     if (String.fromCharCode(caracter) == "i") {
-        document.body.style.backgroundColor = "wheat";
+        document.getElementById("eventos").style.background = "wheat";
+        document.getElementById("eventos").style.color = "#333";
+        document.body.style.background = "wheat";
+        document.body.style.color = "#333";
+        
     }
     else if (letra == "b") {
-        document.body.style.backgroundColor = "#333";
+        document.getElementById("eventos").style.background = "#333";
+        document.getElementById("eventos").style.color = "wheat";
+        document.body.style.background = "#333";
+        document.body.style.color = "wheat";
     }
     
 

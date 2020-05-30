@@ -119,9 +119,6 @@ function validarFormu() {
                     terminos.checked = 0;
                   }
                 }
-
-                
-                
               }
             }
           }

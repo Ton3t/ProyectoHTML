@@ -30,13 +30,19 @@
     padding-top: 10px;
 }
 
-#eventos iframe {
-    width: 400px;
-    height: 300px;
-    border-radius: 5px;
+
+
+#eventos article {
+    margin: 15px;
 }
 
-#enventos .contenedor {
+#eventos iframe {
+    width: 100%;
+    height: 200px;
+    max-width: 280px;
+}
+
+#eventos .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
