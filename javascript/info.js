@@ -148,7 +148,7 @@ function crearTabla() {
 
     // Añadir la tabla creada al final de la página
 
-    var zona = document.getElementById("funciones");
+    var zona = document.getElementById("eventos");
     zona.appendChild(tabla);
     document.getElementById('btnPrecio').style.display = "none";
 }

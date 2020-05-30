@@ -36,7 +36,7 @@ function validarFormu() {
   var formu = document.getElementById('miformulario');
   var terminos = document.getElementById('terminos');
   var indice = document.getElementById("opciones").selectedIndex;
-  
+
 
   var edad = document.getElementById('edad').value;
   var txtArea = document.getElementById('txtArea');
@@ -85,35 +85,38 @@ function validarFormu() {
                   return false;
                 } else {
                   var seccion = document.createElement('section');
-                
+
 
                   var mensaje = document.getElementById("txtArea").value;
                   var nombre = document.getElementById("f1").value;
                   var email = document.getElementById("email").value;
                   var titulo = document.getElementById("tituformu").value;
-  
+
                   var txtTitulo = document.createElement('h2');
                   txtTitulo.innerHTML = "Título: " + titulo;
-  
+
                   var textoNombre = document.createElement('p');
                   textoNombre.innerHTML = "Nombre: " + nombre;
-  
+
                   var textoMensaje = document.createElement('p');
                   textoMensaje.innerHTML = mensaje;
-  
+
                   var textoEmail = document.createElement('p');
-                  textoEmail.innerHTML = "Email: " + email;
-  
+                  textoEmail.innerHTML = email;
+
                   var zona = document.getElementById("firmas");
-  
+
                   seccion.appendChild(txtTitulo);
                   seccion.appendChild(textoMensaje);
                   seccion.appendChild(textoEmail);
                   seccion.appendChild(textoNombre);
-  
+
                   zona.appendChild(seccion);
-  
-                  for(var i = 0; i < formu.length; i ++) {
+
+                  
+
+
+                  for (var i = 0; i < formu.length; i++) {
                     formu[i].value = "";
                     formu[i].style.backgroundColor = "white";
                     terminos.checked = 0;
@@ -126,10 +129,9 @@ function validarFormu() {
       }
     }
   }
-
-  
-
 }
+
+
 
 window.onload = function () {
   this.iniciar();
