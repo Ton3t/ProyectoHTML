@@ -6,6 +6,10 @@ function iniciaJava() {
 
 }
 
+function alertamosJava() {
+    alert("Cambia el fondo con \n'B' o 'I'" )
+}
+
 /**
  * Array con las imagenes y enlaces que se iran mostrando en la web
  */
@@ -192,7 +196,7 @@ window.onload = function () {
     // Indicamos que cada 5 segundos cambie la imagen
     setInterval(rotarImagenes, 5000);
 
-
+    this.alertamosJava();
     this.iniciaJava();
 
 }

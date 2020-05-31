@@ -1,8 +1,11 @@
 function iniciaJava() {
-
-   
     document.body.addEventListener("keypress", musica);
     document.getElementById('btnLeer').addEventListener("click", masTexto);
+    document.getElementById("padre").addEventListener("click", infoPadre);
+    document.getElementById("madre").addEventListener("click", infoMadre);
+    document.getElementById("javi").addEventListener("click", infoJavi);
+    document.getElementById("jaume").addEventListener("click", infoJaume);
+    document.getElementById("tonet").addEventListener("click", infoTonet);
 }
 
 function alertarJava() {
@@ -61,6 +64,26 @@ function musica(elEvento) {
         alert("Pulsa M - Para reanudar la múscia.");
         audio.pause();
     }
+}
+
+function infoPadre() {
+    window.open("https://www.facebook.com/AMS.hosteleria");
+}
+
+function infoJavi() {
+    window.open("https://www.facebook.com/javi.morenocanto");
+}
+
+function infoJaume() {
+    window.open("https://www.facebook.com/jaume.morenocanto");
+}
+
+function infoTonet() {
+    window.open("https://www.facebook.com/iLuSiOnSs");
+}
+
+function infoMadre() {
+    alert("No hay info.");
 }
 
 /**
