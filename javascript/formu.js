@@ -84,7 +84,8 @@ function validarFormu() {
                   alert("Debes puntuar la pagina");
                   return false;
                 } else {
-                  var seccion = document.createElement('section');
+                  var seccion = document.createElement('article');
+                  seccion.setAttribute('id', 'comenta');
 
 
                   var mensaje = document.getElementById("txtArea").value;
@@ -139,6 +140,12 @@ function mueveReloj(){
   horaImprimible = hora + " : " + minuto + " : " + segundo;
   document.form_reloj.reloj.value = horaImprimible;
   setTimeout("mueveReloj()",1000);
+}
+
+function almacenaMensaje(nombre, email, texto) {
+  this.nombre = document.getElementById("f1").value;
+  this.email = document.getElementById("email").value;
+  this.texto = document.getElementById("txtArea").value;
 }
 
 

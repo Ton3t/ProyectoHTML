@@ -10,6 +10,10 @@
     justify-content: center;
 }
 
+#miFor input {
+    margin-bottom: 5px;
+}
+
 .formu {
     margin: 20px;
     padding: 20px;
@@ -45,6 +49,17 @@
     text-align: center;
     margin-bottom: 10px;
     
+}
+
+#eventos {
+    background: wheat;
+    color: #333;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#firmas article {
+    margin: 15px;
 }
 
 #firmas .contenedor {
