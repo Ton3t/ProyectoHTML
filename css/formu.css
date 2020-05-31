@@ -12,6 +12,9 @@
 
 #miFor input {
     margin-bottom: 5px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Baloo 2', cursive;
 }
 
 .formu {
@@ -22,8 +25,9 @@
 #txtArea {
     padding: 5px;
     text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: indigo;
+    font-family: 'Baloo 2', cursive;
+    color:#333;
+    font-size: 15px;
 }
 
 #botonEnviar {
@@ -59,7 +63,8 @@
 }
 
 #firmas article {
-    margin: 15px;
+    width: 50%;
+    margin: auto;
 }
 
 #firmas .contenedor {

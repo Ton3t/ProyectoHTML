@@ -1,7 +1,7 @@
 function iniciar() {
 
   document.getElementById('botonEnviar').addEventListener("click", validarFormu);
-  document.getElementById('txtArea').focus();
+  document.getElementById('tituformu').focus();
 
 }
 
@@ -29,7 +29,7 @@ function rotarImagenes() {
 }
 
 
-/* Comprobar nombre */
+/* Validar formulario */
 function validarFormu() {
 
 
@@ -85,9 +85,6 @@ function validarFormu() {
                   return false;
                 } else {
                   var seccion = document.createElement('article');
-                  seccion.setAttribute('id', 'comenta');
-
-
                   var mensaje = document.getElementById("txtArea").value;
                   var nombre = document.getElementById("f1").value;
                   var email = document.getElementById("email").value;
@@ -103,19 +100,15 @@ function validarFormu() {
                   textoMensaje.innerHTML = mensaje;
 
                   var textoEmail = document.createElement('p');
-                  textoEmail.innerHTML = email;
+                  textoEmail.innerHTML = "Email: " + email;
 
                   var zona = document.getElementById("firmas");
-
                   seccion.appendChild(txtTitulo);
                   seccion.appendChild(textoMensaje);
-                  seccion.appendChild(textoEmail);
                   seccion.appendChild(textoNombre);
+                  seccion.appendChild(textoEmail);
 
                   zona.appendChild(seccion);
-
-                  
-
 
                   for (var i = 0; i < formu.length; i++) {
                     formu[i].value = "";
