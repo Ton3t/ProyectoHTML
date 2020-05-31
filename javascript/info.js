@@ -182,7 +182,7 @@ function cambiaFondo(elEvento) {
 
 function muestraInfo() {
     var info = document.getElementsByClassName("muestra");
-    info.focu(window.load = "https://google.es");
+    info.focus(window.load = "https://google.es");
 }
 
 window.onload = function () {
