@@ -7,7 +7,7 @@ function iniciaJava() {
 }
 
 function alertamosJava() {
-    alert("Cambia el fondo con \n'B' o 'I'" )
+    alert("Cambia el fondo con: 'B' o 'I'" )
 }
 
 /**
@@ -189,13 +189,23 @@ function muestraInfo() {
     info.focus(window.load = "https://google.es");
 }
 
+function mueveReloj(){
+    momentoActual = new Date();
+    hora = momentoActual.getHours();
+    minuto = momentoActual.getMinutes();
+    segundo = momentoActual.getSeconds();
+    horaImprimible = hora + " : " + minuto + " : " + segundo;
+    document.form_reloj.reloj.value = horaImprimible;
+    setTimeout("mueveReloj()",1000);
+}
+
 window.onload = function () {
 
     // Cargamos una imagen aleatoria
     rotarImagenes();
     // Indicamos que cada 5 segundos cambie la imagen
     setInterval(rotarImagenes, 5000);
-
+    this.mueveReloj();
     this.alertamosJava();
     this.iniciaJava();
 

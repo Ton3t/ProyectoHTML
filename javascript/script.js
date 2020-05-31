@@ -86,6 +86,16 @@ function infoMadre() {
     alert("No hay info.");
 }
 
+function mueveReloj(){
+    momentoActual = new Date();
+    hora = momentoActual.getHours();
+    minuto = momentoActual.getMinutes();
+    segundo = momentoActual.getSeconds();
+    horaImprimible = hora + " : " + minuto + " : " + segundo;
+    document.form_reloj.reloj.value = horaImprimible;
+    setTimeout("mueveReloj()",1000);
+}
+
 /**
  * Función que se ejecuta una vez cargada la página
  */
@@ -97,5 +107,6 @@ window.onload = function () {
     setInterval(rotarImagenes, 5000);
     this.iniciaJava();
     this.alertarJava();
+    this.mueveReloj();
 }
 
